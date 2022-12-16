@@ -6,6 +6,7 @@ const portrateText = document.getElementById("PortrateText");
 const text = ["Web Designer", "Game Developer", "Artist"]
 
 window.scrollTo({ top: 0, behavior: 'smooth'});
+ShowNav();
 
 function CheckNav(){
     if(window.pageYOffset==0)
