@@ -9,7 +9,7 @@ window.scrollTo({ top: 0, behavior: 'smooth'});
 ShowNav();
 
 function CheckNav(){
-    if(window.pageYOffset==0)
+    if(window.pageYOffset<=100)
     {
        ShowNav();
     }
