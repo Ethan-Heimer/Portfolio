@@ -15,6 +15,7 @@
     --BodyColor: #272727;
     --PrimaryColor: linear-gradient(135deg, var(--IconColorOne), var(--IconColorTwo));
     --SecondaryColor: White;
+    --FooterColor: #47126B;
 
     --PrimaryFontColor: rgb(255, 255, 255);
     --SecondaryFontColor: Black;
@@ -34,6 +35,21 @@
 body{
     overflow-x: hidden;
     background-color: var(--BodyColor);
+}
+
+footer{
+   background-color: var(--FooterColor);
+
+   width: 100vw;
+   text-align: center;
+   padding: 2vh;
+}
+
+a{
+    transition: .25s;
+}
+a:hover{
+    font-size: calc(var(--LargeFont) + .5vw);
 }
 
 .PrimaryColor{
@@ -123,9 +139,13 @@ body{
     width: 100vw;
 }
 
+.TextAlignLeft{
+    text-align: left;
+}
+
 #Nav{
     width: 100vw;
-    height: 10vh;
+    height: 15vh;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -151,11 +171,22 @@ body{
 
 #PortrateText{
     width: 20vw;
+    white-space: nowrap;
+}
+
+#PortrateText::after{
+    content: " |";
+
+    animation: flash .5s steps(1);
+    animation-iteration-count: infinite;
 }
 
 #Content{
     width: 100vw;
-    padding-block: 1vh;
+}
+
+#Links{
+    padding-block: 2vh;
 }
 
 @keyframes Load {
@@ -164,6 +195,20 @@ body{
     }
     100%{
         transform: translateY(var(--PosTo));
+    }
+}
+
+@keyframes flash{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
     }
 }
 

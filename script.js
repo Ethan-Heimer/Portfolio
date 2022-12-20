@@ -27,14 +27,27 @@ function ShowNav(){navContent.style.top = "0%";}
 function HideNav(){navContent.style.top = "-100%";}
 
 var SelectedText = 0; 
-function IncrementText(){
-    SelectedText++; 
+async function IncrementText(){
+    SelectedText++;
     if(SelectedText > text.length-1){
         SelectedText=0;
     }
 
-    portrateText.textContent = text[SelectedText];
+    var characters = Array.from(text[SelectedText]);
+    var currentString = "";
+   
+   for(var i = 0; i < characters.length; i++){
+        currentString += characters[i];
+        portrateText.textContent = currentString;
+
+        console.log(currentString);
+        await sleep(1000/characters.length);     
+    }
+
 }
 
 setInterval(IncrementText, 3000);
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
