@@ -172,7 +172,7 @@ a:hover{
 #PortrateText{
     white-space: nowrap;
 
-    animation: HiLight 3s steps(1);
+    animation: HiLight 4s steps(1);
     animation-iteration-count: infinite;
 
     position: absolute;

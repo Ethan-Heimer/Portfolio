@@ -36,18 +36,21 @@ async function IncrementText(){
 
     var characters = Array.from(text[SelectedText]);
     var currentString = "";
+
+    portrateText.textContent = currentString;
+
+    await sleep(1000)
    
    for(var i = 0; i < characters.length; i++){
         currentString += characters[i];
         portrateText.textContent = currentString;
-
-        console.log(currentString);
+        
         await sleep(1000/characters.length);     
     }
 
 }
 
-setInterval(IncrementText, 3000);
+setInterval(IncrementText, 4000);
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
