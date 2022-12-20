@@ -3,7 +3,7 @@ const nav = document.getElementById("Nav");
 
 const portrateText = document.getElementById("PortrateText");
 
-const text = ["Web Designer", "Game Developer", "Artist"]
+const text = ["Web Designer", "Game Developer", "Artist"];
 
 window.scrollTo({ top: 0, behavior: 'smooth'});
 ShowNav();
