@@ -3,8 +3,6 @@ const nav = document.getElementById("Nav");
 
 const portrateText = document.getElementById("PortrateText");
 
-const text = ["Web Designer", "Game Developer", "Artist"];
-
 window.scrollTo({ top: 0, behavior: 'smooth'});
 ShowNav();
 
@@ -25,6 +23,9 @@ nav.onpointerleave = HideNav;
 
 function ShowNav(){navContent.style.top = "0%";}
 function HideNav(){navContent.style.top = "-100%";}
+
+
+const text = ["Web Designer", "Game Developer", "Artist"];
 
 var SelectedText = 0; 
 async function IncrementText(){

@@ -170,8 +170,12 @@ a:hover{
 }
 
 #PortrateText{
-    width: 20vw;
     white-space: nowrap;
+
+    animation: HiLight 3s steps(1);
+    animation-iteration-count: infinite;
+
+    position: absolute;
 }
 
 #PortrateText::after{
@@ -210,6 +214,21 @@ a:hover{
     100%{
         opacity: 0;
     }
+}
+
+@keyframes HiLight {
+    0%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    75%{
+        background-color: rgb(0, 136, 255);
+    }
+
+    100%{
+        background-color: rgba(0, 0, 0, 0);
+    }
+
 }
 
 @media only screen and (max-width: 1300px){
